@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="Introduce DNI:"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/numbersLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:text="Números:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/validateButton"
+        app:layout_constraintEnd_toStartOf="@id/numbersText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleLabel" />
+
+    <EditText
+        android:id="@+id/numbersText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="8"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/validateButton"
+        app:layout_constraintEnd_toStartOf="@id/letterLabel"
+        app:layout_constraintStart_toEndOf="@id/numbersLabel"
+        app:layout_constraintTop_toBottomOf="@id/titleLabel" />
+
+    <TextView
+        android:id="@+id/letterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:text="Letra:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/validateButton"
+        app:layout_constraintEnd_toStartOf="@id/letterText"
+        app:layout_constraintStart_toEndOf="@id/numbersText"
+        app:layout_constraintTop_toBottomOf="@id/titleLabel" />
+
+    <EditText
+        android:id="@+id/letterText"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLength="1"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/validateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/letterLabel"
+        app:layout_constraintTop_toBottomOf="@id/titleLabel" />
+
+    <Button
+        android:id="@+id/validateButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:onClick="btnValidar"
+        android:text="Validar"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/resultLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numbersText" />
+
+    <TextView
+        android:id="@+id/resultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/validateButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
